@@ -1,6 +1,14 @@
 Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/xenial64"
 
+    config.vm.network :private_network, ip: "192.168.10.11", netmask: "255.255.255.0"
+
+    config.hostmanager.aliases = %w(fe)
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    config.hostmanager.ignore_private_ip = false
+    config.hostmanager.include_offline = true
+
     config.vm.provision "shell", inline: <<-SHELL
         sudo apt-get -y install python-minimal
     SHELL
