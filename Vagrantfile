@@ -9,6 +9,8 @@ Vagrant.configure("2") do |config|
     config.hostmanager.ignore_private_ip = false
     config.hostmanager.include_offline = true
 
+    config.vm.synced_folder "../fe_app", "/opt/fe_app", nfs: true
+
     config.vm.provision "shell", inline: <<-SHELL
         sudo apt-get -y install python-minimal
     SHELL

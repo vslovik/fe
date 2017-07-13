@@ -1,0 +1,17 @@
+---
+- name: npm
+  apt:
+    name: npm
+    state: present
+    update_cache: yes
+
+- name: nodejs
+  shell: curl -sL https://deb.nodesource.com/setup_7.x -o nodesource_setup.sh
+  sudo: no
+
+- shell: bash nodesource_setup.sh
+
+- apt:
+    name: nodejs
+    state: present
+    update_cache: yes

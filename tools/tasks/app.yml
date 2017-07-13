@@ -1,1 +1,2 @@
-- shell: yarn global add create-react-app
+- shell: cd /opt/fe_app && npm install webpack
+  sudo: no
