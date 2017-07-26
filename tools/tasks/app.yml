@@ -1,2 +1,2 @@
-- shell: cd /opt/fe_app && npm install webpack
+- shell: cd /opt/fe_app/wp && npm install webpack
   sudo: no
