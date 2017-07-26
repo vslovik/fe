@@ -1,2 +1,15 @@
 https://www.stackchief.com/tutorials/Quick%20Start%20%7C%20Webpack
 https://code.tutsplus.com/tutorials/creating-a-blogging-app-using-react-user-sign-in--cms-28568
+
+sudo node node_modules/webpack/bin/webpack
+
+https://facebook.github.io/react/docs/installation.html#creating-a-new-application
+sudo npm install -g create-react-app
+
+cd /opt/fe_app
+create-react-app my-app
+
+cd my-app
+npm start
+
+http://192.168.10.11:3000/
