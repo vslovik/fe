@@ -1,17 +1,13 @@
 ---
-- name: npm
-  apt:
-    name: npm
-    state: present
-    update_cache: yes
-
-- name: nodejs
+- name: nodejs install script download
   shell: curl -sL https://deb.nodesource.com/setup_7.x -o nodesource_setup.sh
   sudo: no
 
-- shell: bash nodesource_setup.sh
+- name: nodejs setup execution
+  shell: bash nodesource_setup.sh
 
-- apt:
+- name: nodejs install
+  apt:
     name: nodejs
     state: present
     update_cache: yes
